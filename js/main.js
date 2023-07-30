@@ -218,3 +218,6 @@ window.addEventListener('load', () => {
     loader.style.display = "none";
   }, 3000);
 })
+$('.carousel').carousel({
+  interval: 2000
+})
