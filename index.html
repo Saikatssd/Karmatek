@@ -20,12 +20,14 @@
 
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/venobox/venobox.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/contact-style.css">
 
   <!-- =======================================================
     Theme Name: TheEvent
@@ -289,58 +291,64 @@
     ============================-->
     <section id="contact" class="section-bg wow fadeInUp">
 
-      <div class="container">
+      <div class="container2">
 
         <div class="section-header">
           <h2>Contact Us</h2>
         </div>
 
-        <div class="row contact-info">
-
-          <div class="col-md-6">
-            <div class="contact-address">
-              <i class="ion-ios-location-outline"></i>
-              <h3>Address</h3>
-              <address>73,Avinash Chandra Bannerjee Lane, Kolkata-700010</address>
+        <div class="content">
+          <div class="contactInfo">
+            <div class="box">
+              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="text">
+                <h3>Address</h3>
+                <p>73,Avinash Chandra Bannerjee Lane, Kolkata-700010</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="text">
+                <h3>Phone</h3>
+                <p>Alapan Das: +91 90888 92283</p>
+                <p>Yashwant Kumar: +91 73849 55074</p>
+                <p>Debargho Ganguli: +91 74394 82920</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="text">
+                <h3>Email</h3>
+                <p>abc@gmail.com</p>
+              </div>
             </div>
           </div>
 
-          <div class="col-md-6">
-            <div class="contact-phone">
-              <i class="ion-ios-telephone-outline"></i>
-              <h3>Contact Number</h3>
-              <p>Alapan Das: +91 90888 92283</p>
-              <p>Yashwant Kumar: +91 73849 55074</p>
-              <p>Debargho Ganguli: +91 74394 82920</p>
-            </div>
+          <div class="contactForm">
+            <form>
+              <h2>Send Message</h2>
+              <div class="inputbox">
+                <input type="text" required="required">
+                <span>Full Name</span>
+              </div>
+              <div class="inputbox">
+                <input type="text" required="required">
+                <span>Email</span>
+              </div>
+              <div class="inputbox">
+                <input type="text" required="required">
+                <span>Subject</span>
+              </div>
+              <div class="inputbox">
+                <textarea required="required"></textarea>
+                <span>Type Your Message...</span>
+              </div>
+              <div class="inputbox">
+                <input type="submit" value="Send">
+              </div>
+            </form>
           </div>
 
-        </div>
-
-        <div class="form">
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form action="" method="post" role="form" class="contactForm">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-              <div class="validation"></div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
         </div>
 
       </div>
