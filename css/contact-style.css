@@ -1,32 +1,39 @@
-.container2{
-    position:relative;
+.container2 {
+    position: relative;
     min-height: 100vh;
-    padding: 50px 100px;
+    padding: 50px 10%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-image: url('../img/contactus-bg.png');
+    background-attachment: fixed;
     background-size: cover;
-}
-.content{
+  }
+  
+  .content {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 30px;
-}
-.content .contactInfo{
+  }
+  
+  .content .contactInfo {
     width: 50%;
     display: flex;
     flex-direction: column;
-}
-.content .contactInfo .box{
+    padding: 10px;
+  }
+  
+  .content .contactInfo .box {
     position: relative;
     padding: 20px 0;
     display: flex;
-}
-.content .contactInfo .box .icon{
+  }
+  
+  .content .contactInfo .box .icon {
     min-width: 40px;
     height: 40px;
     background: #fff;
@@ -36,36 +43,43 @@
     border-radius: 50%;
     font-size: 22px;
     color: #4869df;
-}
-.content .contactInfo .box .text{
+  }
+  
+  .content .contactInfo .box .text {
     display: flex;
     margin-left: 20px;
     font-size: 16px;
     flex-direction: column;
     color: #fff;
-}
-.content .contactInfo .box .text h3{
+  }
+  
+  .content .contactInfo .box .text h3 {
     font-weight: bold;
-    font-size:x-large;
+    font-size: x-large;
     color: #00bcd4;
-}
-.contactForm{
+  }
+  
+  .contactForm {
     width: 40%;
     padding: 40px;
     background: #fff;
     color: #333;
-}
-.contactForm h2{
+  }
+  
+  .contactForm h2 {
     font-size: 30px;
     color: #333;
     font-weight: 500;
-}
-.contactForm .inputbox{
+  }
+  
+  .contactForm .inputbox {
     position: relative;
     width: 100%;
     margin-top: 10px;
-}
-.contactForm .inputbox input,.contactForm .inputbox textarea{
+  }
+  
+  .contactForm .inputbox input,
+  .contactForm .inputbox textarea {
     width: 100%;
     padding: 5px 0;
     font-size: 16px;
@@ -74,8 +88,9 @@
     border-bottom: 2px solid #333;
     outline: none;
     resize: none;
-}
-.contactForm .inputbox span{
+  }
+  
+  .contactForm .inputbox span {
     position: absolute;
     left: 0;
     padding: 5px 0;
@@ -84,17 +99,18 @@
     pointer-events: none;
     transition: 0.5s;
     color: #666;
-}
-.contactForm .inputbox input:focus ~ span,
-.contactForm .inputbox input:valid ~ span,
-.contactForm .inputbox textarea:focus ~ span,
-.contactForm .inputbox textarea:valid ~ span
-{
+  }
+  
+  .contactForm .inputbox input:focus ~ span,
+  .contactForm .inputbox input:valid ~ span,
+  .contactForm .inputbox textarea:focus ~ span,
+  .contactForm .inputbox textarea:valid ~ span {
     color: #e91e63;
     font-size: 12px;
     transform: translateY(-20px);
-}
-.contactForm .inputbox input[type="submit"]{
+  }
+  
+  .contactForm .inputbox input[type="submit"] {
     width: 100px;
     background: #f82249;
     border: none;
@@ -103,34 +119,36 @@
     transition: 0.4s;
     border-radius: 50px;
     cursor: pointer;
-}
-.contactForm .inputbox input[type="submit"]:hover{
+  }
+  
+  .contactForm .inputbox input[type="submit"]:hover {
     background: #e0072f;
-  transform: scale(1.1);
-}
+    transform: scale(1.1);
+  }
+  
 
-/*---------------------------
-    Responsive properties
-----------------------------*/
 
-@media (max-width: 991px){
-    #contact{
-        padding:50px;
-    }
-    .content{
-        flex-direction: column;
-    }
+  /*---------------------------
+      Responsive properties
+  ----------------------------*/
+  
+  @media (max-width: 991px) {
+    /* #contact {
+      padding: 50px 5%;
+    } */
     .content .contactInfo,
-    .content .contactForm{
-        margin-bottom: 40px;
-        width: 100%;
+    .content .contactForm {
+      /* margin-bottom: 40px; */
+      width: 100%;
     }
-}
-@media (max-width: 592px){
-    .content{
-        flex-direction: column;
+  }
+  
+  @media (max-width: 768px) {
+    .content .contactInfo {
+      width: 100%;
     }
-    .content .contactForm{
-        width:300px;
+    .content .contactForm {
+      width: 100%;
     }
-}
+  }
+  
