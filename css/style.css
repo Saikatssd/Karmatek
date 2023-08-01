@@ -692,6 +692,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 
+
 @-webkit-keyframes pulsate-btn {
   0% {
     -webkit-transform: scale(0.6, 0.6);
@@ -1505,15 +1506,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 8px 4px;
   }
 }
-@media (max-width: 560px) {
-  #main_logo{
-    
-    width:40vw;
-  }
-  #intro .about-btn {
-    display: none;
-  }
-}
+
 
 @media (max-width: 991px) {
   .col-md-6{
