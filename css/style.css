@@ -513,24 +513,24 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* .carousel-container {
   overflow: hidden;
 } */
-
+/* 
 .carousel-wrapper {
   display: flex;
   width: 100%;
-  height: 100vh; /* Set the slide height to the full viewport height */
+  height: 100vh; 
   transition: transform 0.3s ease-in-out;
 }
 
 .carousel-slide {
-  flex: 0 0 100%; /* Set the slide width to 100% */
-  height: 100%; /* Set the slide height to the full viewport height */
+  flex: 0 0 100%; 
+  height: 100%; 
 }
 
 .carousel-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Make the image cover the slide entirely */
-}
+  object-fit: cover; 
+} */
 
 
 
@@ -538,11 +538,23 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: 100vh;
-  background: url(../img/12222.png) top center;
+  /* background: url(../img/12222.png) top center; */
   background-size: cover;
   overflow: hidden;
   position: relative;
 }
+
+/* #intro {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/Robots-a_d.webp) top center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+} */
 
 #intro:before {
   content: "";
@@ -1768,3 +1780,30 @@ textarea:valid ~ label {
   }
 }
 
+/* Animation on scroll */
+.heroAnimate{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.heroAnimate2{
+  opacity: 0;
+  filter: blur(5px);
+  /* transform: translateX(-100%); */
+  transform: scale(1.3);
+  transition: all 1s;
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .heroAnimate {
+    transition: all 1s;
+  }
+}

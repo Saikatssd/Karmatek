@@ -210,9 +210,9 @@ jQuery(document).ready(function ($) {
 });
 
 
-// $('.carousel').carousel({
-//   interval: 2000
-// })
+$('.carousel').carousel({
+  interval: 2500
+})
 
 
 var loader = document.getElementById("preloader");
@@ -226,64 +226,55 @@ window.addEventListener('load', () => {
 
 
 // $(document).ready(function () {
-
 //   const images = [
-//     // 'img/12222.png',
-//     'img/Gaming.webp',
-//     'https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     'https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+//     'img/12222.png',
 //     'img/Robots-a_d.webp',
-//     'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg'
+//     'img/Gaming.webp',
 //     //  image URLs 
 //   ];
+
 //   const $carouselWrapper = $('.carousel-wrapper');
+//   const slideCount = images.length;
+//   let currentIndex = 0;
+
+//   function goToSlide(index) {
+//     if (index < 0) index = slideCount - 1;
+//     if (index >= slideCount) index = 0;
+
+//     currentIndex = index;
+//     const translateX = -currentIndex * 100;
+//     $carouselWrapper.css('transform', `translateX(${translateX}%)`);
+//   }
+
+//   function slideNext() {
+//     goToSlide(currentIndex + 1);
+//   }
 
 //   // Create the initial slides
 //   images.forEach((image, index) => {
 //     const $slide = $(`<div class="carousel-slide"><img src="${image}" alt="Slide ${index + 1}"></div>`);
-//     $slide.css('left', `${index * 100}vw`);
+//     $slide.css('left', `${index * 100}%`);
 //     $carouselWrapper.append($slide);
 //   });
 
-//   // Initialize the carousel using the .carousel() 
-//   $carouselWrapper.carousel({
-//     interval: 2000, // Slide every 2 seconds (2000 milliseconds)
-//   });
+//   setInterval(slideNext, 2500); // Slide every 2 seconds (2000 milliseconds)
 // });
 
-
-
-$(document).ready(function () {
-  const images = [
-    'https://images.unsplash.com/photo-1623479322729-28b25c16b011?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-    'img/12222.png',
-    'img/Robots-a_d.webp',
-    'img/Gaming.webp',
-    //  image URLs 
-  ];
-
-  const $carouselWrapper = $('.carousel-wrapper');
-  const slideCount = images.length;
-  let currentIndex = 0;
-
-  function goToSlide(index) {
-    if (index < 0) index = slideCount - 1;
-    if (index >= slideCount) index = 0;
-
-    currentIndex = index;
-    const translateX = -currentIndex * 100;
-    $carouselWrapper.css('transform', `translateX(${translateX}%)`);
-  }
-
-  function slideNext() {
-    goToSlide(currentIndex + 1);
-  }
-
-  // Create the initial slides
-  images.forEach((image, index) => {
-    const $slide = $(`<div class="carousel-slide"><img src="${image}" alt="Slide ${index + 1}"></div>`);
-    $slide.css('left', `${index * 100}%`);
-    $carouselWrapper.append($slide);
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+    else {
+      entry.target.classList.remove('show');
+    }
   });
-
-  setInterval(slideNext, 2500); // Slide every 2 seconds (2000 milliseconds)
 });
+
+const hiddenElements = document.querySelectorAll('.heroAnimate');
+hiddenElements.forEach((e1)=>observer.observe(e1));
+
+const hidden2Elements = document.querySelectorAll('.heroAnimate2');
+hidden2Elements.forEach((e1)=>observer.observe(e1));
