@@ -261,9 +261,11 @@ window.addEventListener('load', () => {
 //   setInterval(slideNext, 2500); // Slide every 2 seconds (2000 milliseconds)
 // });
 
+//For animation on scroll
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
+    // console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
     }
@@ -278,3 +280,14 @@ hiddenElements.forEach((e1)=>observer.observe(e1));
 
 const hidden2Elements = document.querySelectorAll('.heroAnimate2');
 hidden2Elements.forEach((e1)=>observer.observe(e1));
+
+
+//Horizontal Scrollbar
+let eventdate=document.querySelector('.clock .section-header');
+let clock=document.querySelector('#clockdiv');
+window.onscroll=()=>{
+  let pos =window.scrollY;
+  console.log(pos)
+  // eventdate.style.left=`${pos}px`
+  // clock.style.right=`${pos}px`
+}
