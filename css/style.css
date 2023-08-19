@@ -17,14 +17,14 @@ body {
 
 
 a {
-  color: #f82249;
+  color: #ffffff;
   transition: 0.5s;
 }
 
 a:hover,
 a:active,
 a:focus {
-  color: #f8234a;
+  color: #0a6691;
   outline: none;
   text-decoration: none;
 }
@@ -46,7 +46,10 @@ h6 {
   padding: 0;
   color: white;
 }
-
+.center{
+  justify-content: center;
+    display: flex;
+}
 .main-page {
   margin-top: 70px;
 }
@@ -755,6 +758,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
+  width: 100%;
+  height: 88%;
 
 }
 
@@ -1138,11 +1143,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-right: 1px solid #e0e5fa;
-  border-bottom: 1px solid #e0e5fa;
+  /* border-right: 1px solid #e0e5fa;
+  border-bottom: 1px solid #e0e5fa; */
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.5);
-  height: 160px;
+  /* background: rgba(255, 255, 255, 0.5); */
+  height: 74%;
+    width: 80%;
 }
 
 #sponsors .sponsor-logo:hover img {
@@ -1619,11 +1625,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Custom CSS */
 
 .event-card{
-  border: 1px solid red;
-  border-radius: 6% ;
+  border: 3px solid rgb(47, 169, 226);
+  border-radius: 50px ;
   padding: 3rem;
   display: flex;
   margin: 5% auto;
+  background-color: #0e1b4c63;
 }
 .event-card p{
   font-size: 20px;
@@ -1636,18 +1643,29 @@ body.mobile-nav-active #mobile-nav-toggle {
 .buttons-cont{
   margin:4% auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .btn1{
   font-size: 15px;
   border-radius: 50px;
   padding: 10px 40px;
   transition: all 0.2s;
-  background-color: transparent;
-  border: 2px solid red;
+  background-color: #0a6691;
+    border: 2px solid #363232;
+  margin: 20px;
+  cursor: pointer;
 }
 .btn1:hover{
+  background-color: #ffffff;
   transform: scale(1.3);
+}
+.btn1:hover a{
+ color: #0a6691;
+}
+.img-fluid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* banner */
@@ -1767,7 +1785,7 @@ textarea:valid ~ label {
 
 @media only screen and (max-width: 1000px) {
   .buttons-cont{
-    display: block;
+    flex-direction: column;
   }
   .btn1{
     margin: 5% auto;
@@ -1810,6 +1828,7 @@ textarea:valid ~ label {
   filter: blur(0);
   transform: translateX(0);
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .heroAnimate {
