@@ -217,9 +217,9 @@ $('.carousel').carousel({
 
 var loader = document.getElementById("preloader");
 window.addEventListener('load', () => {
-  setInterval(() => {
+  //setInterval(() => {
     loader.style.display = "none";
-  }, 1000);
+ // }, 1000);
 })
 
 
